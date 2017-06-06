@@ -9,9 +9,9 @@ from nltk import word_tokenize
 from nltk.tokenize import sent_tokenize
 
 
-db = MySQLdb.connect(host="35.184.241.249",    # your host, usually localhost
-                     user="root",         # your username
-                     passwd="killerreboot",  # your password
+db = MySQLdb.connect(host="0.0.0.0",    # your host, usually localhost
+                     user="user",         # your username
+                     passwd="passwd",  # your password
                      db="mimic_sql")        # name of the data base
 
 physician_df = pd.read_sql("SELECT ROW_ID, CATEGORY, TEXT FROM NOTEEVENTS where category='Physician' limit 2670", con=db)
