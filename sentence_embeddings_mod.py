@@ -37,14 +37,10 @@ model = Doc2Vec(min_count=5, window=10, size=200, sample=1e-4, negative=5, worke
 
 model.build_vocab(label_sentences)
 
-
 fname = 'd2v-200'
 model.save(fname)
 
 model.delete_temporary_training_data(keep_doctags_vectors=True, keep_inference=True)
 
-del db
-del notes
-del label_sentences
 
 
